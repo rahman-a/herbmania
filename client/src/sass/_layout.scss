@@ -1,0 +1,14 @@
+.container {
+    width:85vw;
+    margin:0 auto;
+    @include respond(land-tablet){
+        width:90vw;
+    }
+    @include respond(land-phone){
+        width:95vw;
+        height: 100%;
+    }
+    @include respond(phone){
+        width:100vw;
+    }
+}

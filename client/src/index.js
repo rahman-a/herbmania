@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+import 'normalize.css/normalize.css';
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import './app.scss';
 import App from './App';
 import {BrowserRouter as Router} from 'react-router-dom'
 import  {Provider}  from 'react-redux'

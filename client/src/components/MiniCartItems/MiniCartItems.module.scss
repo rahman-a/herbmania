@@ -1,0 +1,43 @@
+@import 'responsive';
+.cart {
+    &__item {
+        color:var(--dark-green-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:1rem;
+        font-size: 1.3rem;
+        &:not(:last-of-type) {
+            border-bottom: 1px solid var(--off-white-color);
+        }
+        &:hover {
+            background-color: var(--off-white-color);
+        }
+        i {
+            color:var(--gray-color);
+        }
+        i:active {
+            color:rgb(235, 81, 81);
+        }
+        i:hover {
+            background-color: var(--off-white-color);
+        }
+        @include respond(land-tablet) {
+            font-size: 1.1rem;
+        }
+    }
+    &__name {
+        margin: 0 1rem;
+        width: 12rem;
+        @include respond(land-tablet) {
+           width:9rem;
+        }
+    }
+    &__image {
+        width: 5rem;
+        border-radius: 50%;
+    }
+    &__price {
+        margin: 0 2rem 0 1rem;
+    }
+}

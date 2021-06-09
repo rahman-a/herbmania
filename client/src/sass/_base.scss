@@ -1,0 +1,33 @@
+html, body {
+    width:100%;
+}
+
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-size: 62.5%;
+    @include respond(big-screen){
+        font-size: 75%;
+    }
+    @include respond(tablet){
+        font-size: 56.25%;
+    }
+    @include respond(land-phone){
+        font-size: 50%;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--main-font);
+}
+
+ul {
+    list-style: none;
+}
