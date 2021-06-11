@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
+import Carousel from '../../components/Carousel/Carousel'
 const Home = () => {
     return (
         <>
@@ -7,7 +8,7 @@ const Home = () => {
             <Header/>
         </header>
         <main>
-
+            <Carousel/>
         </main>
         <footer>
             

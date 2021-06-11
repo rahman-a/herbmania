@@ -18,9 +18,16 @@ import Logo from '../../images/logo.png'
 import DropdownMenu from '../DropdownMenu/DropdownMenu'
 import MiniCartItems from '../MiniCartItems/MiniCartItems'
 import MiniCartOptions from '../MiniCartOptions/MiniCartOptions'
+import Navbar from '../Navbar/Navbar'
+import NavBtn from '../../utils/HamBtn'
+import BlurBackground from '../../utils/BlurBackground'
 
 const Header = () => {
     const [lang, setLang] = useState('EN')
+    const [isOpen, setIsOpen] = useState(false)
+    const isOpenHandler = _ => {
+        setIsOpen(!isOpen)
+    }
     // eslint-disable-next-line
     const [isAuth, setIsAuth] = useState(true)
     const lang_option = [
@@ -59,7 +66,7 @@ const Header = () => {
         //     image:'/img/herb (3).png',
         //     price:1.98
         // }
-        
+
     ]
 
     const langHandler = (value) => {
@@ -67,7 +74,10 @@ const Header = () => {
     }
    
     return (
+        <>
         <div className={header}>
+            <BlurBackground isOpen={isOpen}/>
+            <NavBtn openNavHandler={isOpenHandler}/>
             <div className="container">
                 <div className={header__wrapper}>
 
@@ -102,7 +112,7 @@ const Header = () => {
                                         <a href="#" className={header__link}>Setting</a>
                                     </li>
                                     <li className={header__item}>
-                                        <i class="fas fa-tachometer-alt"></i>
+                                        <i className="fas fa-tachometer-alt"></i>
                                         {/* eslint-disable-next-line */}
                                         <a href="#" className={header__link}>Dashboard</a>
                                     </li>
@@ -169,8 +179,10 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
+        <Navbar isOpen={isOpen}/>
+        </>
     )
 }
 
