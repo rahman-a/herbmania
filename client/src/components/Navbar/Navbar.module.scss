@@ -34,7 +34,7 @@
         transition: all 0.5s ease;
         &:hover {
             box-shadow: unset;
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
         @include respond(land-phone) {
             flex-grow: unset;
@@ -44,7 +44,7 @@
     }
     &__link {
         display: block;
-        color:var(--dark-green-color);
+        color:var(--off-white-color);
         text-decoration: none;
         padding: 1rem 1.5rem;
         text-align: center;
