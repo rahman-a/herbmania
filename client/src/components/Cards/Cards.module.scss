@@ -1,0 +1,17 @@
+.cards {
+    background-color: var(--off-white-color);
+    height: 20rem;
+    position: relative;
+    overflow:hidden;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top:50%;
+        left:10rem;
+        transform: translateY(-50%);
+        cursor:grabbing;
+        transition: all 0.2s ease;
+        user-select: none;
+    }
+}

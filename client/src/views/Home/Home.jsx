@@ -3,6 +3,8 @@ import Header from '../../components/Header/Header'
 import Carousel from '../../components/Carousel/Carousel'
 import Collection from '../../components/Collection/Collection'
 import HeroProduct from '../../components/HeroProduct/HeroProduct'
+import Cards from '../../components/Cards/Cards'
+import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts'
 
 const Home = () => {
     return (
@@ -14,6 +16,8 @@ const Home = () => {
             <Carousel/>
             <Collection/>
             <HeroProduct/>
+            <Cards/>
+            <FeaturedProducts/>
         </main>
         <footer>
             
