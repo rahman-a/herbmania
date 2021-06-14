@@ -1,11 +1,22 @@
+@import 'responsive';
+
 .product {
-    width: 30rem;
-    height: 43rem;
+    width: 35rem;
+    height: 45rem;
     background-color: var(--off-white-color);
     border-radius: 2rem;
     box-shadow: 0 1.5rem 2rem -0.6rem rgba(0,0,0,0.5);
     display: grid;
     place-items: center;
+    &_vrt {
+        all:unset;
+        margin-bottom: 3rem;
+        width: 100%;
+        position: relative;
+    }
+    @include respond(land-phone) {
+        margin-bottom: 2rem;
+    }
     &__wrapper {
         width:95%;
         height:95%;
@@ -14,17 +25,48 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        border:1px dashed var(--high-dark-green-color)
+        border:1px dashed var(--high-dark-green-color);
+        &_vrt {
+            all:unset;
+            display: flex;
+            align-items: flex-start;
+        }
     }
     &__figure {
-        width:80%;
+        width:75%;
         height: 65%;
         margin-top: 1.5rem;
         overflow:hidden;
         border-radius: 1rem;
+        &_wrapper {
+            height: 100%;
+        }
         img {
             width:100%;
             height: 100%;
+        }
+        &_vrt {
+            width: 25rem;
+            height: 20rem;
+            background-color: var(--white-color);
+            box-shadow: 0 1.2rem 1.8rem -0.6rem rgba(0,0,0,0.3);
+            display: grid;
+            place-items: center;
+            margin-top: 0;
+            margin-right: 2rem;
+            &_wrapper {
+                width: 95%;
+                height: 95%;
+                background-color: #04872a1c;
+                display: grid;
+                place-items: center;
+                border: 1px dashed;
+                overflow: hidden;
+                img {
+                    width: 95%;
+                    height: 95%;
+                }
+            }
         }
     }
     &__details {
@@ -32,6 +74,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        &_vrt {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
     &__title {
         margin: 1rem 0;
@@ -70,6 +116,12 @@
         color:var(--high-dark-green-color);
         i {
             margin-left:1rem
+        }
+        &_vrt {
+            position: absolute;
+            right: 0;
+            width: 15%;
+            padding: 1.5rem;
         }
     }
 }

@@ -3,33 +3,42 @@ import {
     product,
     product__wrapper,
     product__figure,
+    product__figure_wrapper,
     product__details,
     product__title,
     product__price,
     product__price_discount,
-    product__price_full,
     product__rating,
-    product__cta
+    product__cta,
+    // Vertical Classes
+    product__figure_vrt,
+    product__wrapper_vrt,
+    product_vrt,
+    product__figure_vrt_wrapper,
+    product__details_vrt,
+    product__cta_vrt
 } from './Product.module.scss'
 import Rating from '../Rating/Rating'
 
-const Product = () => {
+const Product = ({image, name, price, discount, rating, vertical}) => {
     return (
-        <div className={product}>
-            <div className={product__wrapper}>
-                <figure className={product__figure}>
-                    <img src="/img/slide-3.png" alt="" />
+        <div className={` ${product} ${vertical && product_vrt}`}>
+            <div className={`${product__wrapper} ${vertical && product__wrapper_vrt}`}>
+                <figure className={`${product__figure} ${vertical && product__figure_vrt}`}>
+                    <div className={`${product__figure_wrapper} ${vertical && product__figure_vrt_wrapper}`}>
+                        <img src={image} alt="" />
+                    </div>
                 </figure>
-                <div className={product__details}>
-                    <h4 className={product__title}>Lorem Ipsum</h4>
+                <div className={`${product__details} ${vertical && product__details_vrt}`}>
+                    <h4 className={product__title}>{name}</h4>
                     <p className={product__price}>
-                        <span className={product__price_discount}>2.99$</span>
-                        <span className={product__price_full}>1.99$</span>
+                        <span className={discount && product__price_discount}>{price}$</span>
+                        {discount && <span>{(price * discount / 100).toFixed(2)}$</span>}
                     </p>
                     <div className={product__rating}>
-                        <Rating rating={3.5}/>
+                        <Rating rating={rating}/>
                     </div>
-                    <button className={product__cta}>
+                    <button className={`${product__cta} ${vertical && product__cta_vrt}`}>
                         add to cart <i className="fas fa-shopping-basket"></i>
                     </button>
                 </div>

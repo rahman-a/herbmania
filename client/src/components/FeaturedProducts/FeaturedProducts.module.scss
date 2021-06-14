@@ -1,9 +1,17 @@
+@import 'responsive';
+
 .products {
     padding:10rem 0;
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+        flex-wrap: wrap;
+        @include respond(land-phone) {
+            flex-direction: column;
+        }
+        // Vertical Position
+        // flex-direction: column; //test
+        // align-items: flex-start; //test
     } 
 }

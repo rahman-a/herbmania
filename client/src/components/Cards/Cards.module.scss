@@ -1,3 +1,4 @@
+@import 'responsive';
 .cards {
     background-color: var(--off-white-color);
     height: 20rem;
@@ -13,5 +14,8 @@
         cursor:grabbing;
         transition: all 0.2s ease;
         user-select: none;
+        @include respond(land-phone) {
+            left:0;
+        }
     }
 }
