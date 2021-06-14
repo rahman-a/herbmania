@@ -1,0 +1,103 @@
+@import 'responsive';
+
+.hero{
+    padding:10rem 0;
+    background-image: url('../../images/hero_bg.png');
+    background-position: right;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @include respond(land-phone) {
+        position: relative;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include respond(land-phone) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__figure {
+        width:35rem;
+        z-index: -2;
+        @include respond(land-phone) {
+           width:30rem;
+           z-index:1;
+        }
+    }
+    &__image {
+        width:100%
+    }
+    &__desc {
+        width:50%;
+        margin-left: 5rem;
+        @include respond(tablet) {
+            margin-left: 3rem;
+        }
+        @include respond(land-phone) {
+         width:100%;
+         text-align: center;  
+         margin-top: 3rem;
+         margin-left: 0;
+        }
+    }
+    &__title {
+        font-size: 8rem;
+        color:var(--green-color);
+        font-family: var(--secondary-font);
+        font-style: italic;
+        font-weight: 100;
+        margin-left: -10rem;
+        letter-spacing: .5rem;
+        @include respond(land-tablet) {
+            font-size: 6rem;
+        }
+        @include respond(land-phone) {
+           font-size: 5rem;
+           position: absolute;
+           top:-0.8rem;
+           width:100%;
+           margin-left: 0;
+        }
+        &::before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            background-color: var(--white-color);
+            width: 5rem;
+            height: 8rem;
+            z-index: -1;
+            @include respond(tablet) {
+                width:7rem;
+            }
+            @include respond(land-phone) {
+                display: none;
+            }
+        }
+    }
+    &__par {
+        font-family: var(--secondary-font);
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1.8;
+        color:var(--high-dark-green-color)
+    }
+    &__cta {
+        all:unset;
+        width:20rem;
+        background-color: var(--green-color);
+        padding: 2rem 5rem;
+        text-align: center;
+        margin-top: 3rem;
+        cursor: pointer;
+        i {
+            transition: all 0.5s ease;
+        }
+        &:hover i {
+            margin-left: 1rem;
+        }
+    }
+}
