@@ -3,7 +3,7 @@ import {
     products,
     products__wrapper
 } from './FeaturedProducts.module.scss'
-import Product from '../Product/Product'
+import Product from '../ProductCard/ProductCard'
 
 function FeaturedProducts() {
     const all_products = [

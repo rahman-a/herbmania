@@ -5,6 +5,7 @@ import Collection from '../../components/Collection/Collection'
 import HeroProduct from '../../components/HeroProduct/HeroProduct'
 import Cards from '../../components/Cards/Cards'
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts'
+import Footer from '../../components/Footer/Footer'
 
 const Home = () => {
     return (
@@ -18,6 +19,8 @@ const Home = () => {
             <HeroProduct/>
             <Cards/>
             <FeaturedProducts/>
+            <FeaturedProducts/>
+            <Footer/>
         </main>
         <footer>
             

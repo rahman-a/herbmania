@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 import {cards, cards__wrapper} from './Cards.module.scss'
-import Card from '../ProductCard/ProductCard'
+import Card from '../ProductMiniCard/ProductMiniCard'
 
 const Cards = () => {
     const all_card = [
