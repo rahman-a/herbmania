@@ -1,0 +1,26 @@
+.bar {
+    &__show,
+    &__sort,
+    &__view {
+        position: relative;
+        cursor: pointer;
+        &:active {
+            color:var(--off-white-color);
+        }
+        li {
+            padding: 1.5rem;
+            color:var(--dark-green-color);
+            cursor: pointer;
+            width:20rem;
+            font-size: 1.4rem;
+            &:not(:last-child) {
+                margin-bottom: 0.5rem;
+            }
+            &:hover {
+                background-color: var(--off-white-color);
+            }
+            i {
+                margin-right: 1rem;
+        }   }
+    }
+}

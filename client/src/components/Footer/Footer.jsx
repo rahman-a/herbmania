@@ -1,7 +1,6 @@
 import React from 'react'
 import {
     footer,
-    footer__wrapper,
     footer__logo,
     footer__desc,
     footer__social,
@@ -16,7 +15,6 @@ const Footer = () => {
     const date = new Date()
     return (
         <div className={footer}>
-            <div className={footer__wrapper}>
                 <div className={footer__logo}>
                     <img src={Logo} alt="logo" />
                 </div>
@@ -46,7 +44,6 @@ const Footer = () => {
                 <p className={footer__copyright}>
                     copyrights {date.getFullYear()} &copy; all rights reserved
                 </p>
-            </div>
         </div>
     )
 }

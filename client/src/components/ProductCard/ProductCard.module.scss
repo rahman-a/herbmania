@@ -8,6 +8,7 @@
     box-shadow: 0 1.5rem 2rem -0.6rem rgba(0,0,0,0.5);
     display: grid;
     place-items: center;
+    margin-bottom: 5rem;
     &_vrt {
         all:unset;
         margin-bottom: 3rem;
@@ -122,6 +123,11 @@
             right: 0;
             width: 15%;
             padding: 1.5rem;
+            @include respond(land-phone) {
+                right:unset;
+                bottom:0;
+                width:25%
+            }
         }
     }
 }

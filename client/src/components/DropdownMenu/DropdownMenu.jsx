@@ -5,7 +5,7 @@ import {
     drop__wrapper
 } from './DropdownMenu.module.scss'
 
-const DropdownMenu = ({children}) => {
+const DropdownMenu = ({children, top, left}) => {
     
     const listRef = useRef(null)
     const listWrapperRef = useDetectClickOutside({onTriggered: (e) => {
@@ -20,12 +20,20 @@ const DropdownMenu = ({children}) => {
         }
     }})
     return (
-        <div className={drop__wrapper} ref={listWrapperRef}>
+        <div className={drop__wrapper} 
+        ref={listWrapperRef} 
+        style={{
+            top:`${top}rem`, 
+            left:`${left}rem`
+        }}>
         <ul className={drop__list} ref={listRef}>
            {children}
         </ul>
     </div>
     )
 }
-
+DropdownMenu.defaultProps = {
+    top:5.98,
+    left:-3.5
+}
 export default DropdownMenu

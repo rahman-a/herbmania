@@ -1,0 +1,26 @@
+@import 'responsive';
+
+.products {
+    &__bar {
+        height: 6rem;
+        background-color: var(--off-white-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:4rem 0;
+        padding: 0 2rem;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        @include respond(land-phone) {
+            flex-direction: column;
+        }
+        &_vrt {
+            flex-direction: column; 
+            align-items: flex-start; 
+        }
+    }
+}

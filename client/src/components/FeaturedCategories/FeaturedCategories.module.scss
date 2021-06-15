@@ -1,0 +1,37 @@
+.categories {
+    height: 50rem;
+    position: relative;
+    background-color: var(--off-white-color);
+    background-image: url(../../images/cat_bg.svg);
+    background-position: -5% 25%;
+    background-size: 65%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:5rem 0;
+    }
+    &__desc {
+        width: 45%;
+    }
+    &__title {
+        color:var(--high-dark-green-color);
+        font-size: 3rem;
+        font-weight: bold;
+        font-style: italic;
+        margin-bottom: 2rem;
+    }
+    &__par {
+        color:var(--high-dark-green-color);
+        font-family: var(--secondary-font);
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1.6;
+        letter-spacing: 1px;
+    }
+    &__graph {
+        width:50%;
+    } 
+}
